@@ -76,7 +76,7 @@ npm run build:rn     # React Native（需另行配置）
 - 商业使用（含上架应用商店、嵌入商业产品、对外提供付费服务）需取得书面授权。
 - 第三方组件（lunar-javascript、iztro、Taro、React、Sass）均为 MIT 许可，
   可商用，但须保留版权声明，详见 [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md)。
-- 商业授权咨询：<在此填写你的邮箱或微信>
+- 商业授权咨询：997147376@qq.com
 
 ## 免责声明
 
