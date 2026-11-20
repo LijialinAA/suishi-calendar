@@ -1,0 +1,126 @@
+.arc-card {
+  margin-top: 16rpx;
+  padding: 20rpx 22rpx;
+  border-radius: 18rpx;
+  border: 1rpx solid #ddd4c4;
+  background: #fbf8f1;
+  box-shadow: 0 4rpx 12rpx rgba(120, 96, 60, 0.13);
+  animation: cardIn 0.42s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.arc-card:nth-child(2) { animation-delay: 0.05s; }
+.arc-card:nth-child(3) { animation-delay: 0.1s; }
+.arc-card:nth-child(4) { animation-delay: 0.15s; }
+.arc-card:nth-child(5) { animation-delay: 0.2s; }
+.arc-card:nth-child(n + 6) { animation-delay: 0.25s; }
+
+.arc-hd {
+  display: flex;
+  align-items: center;
+}
+
+.arc-main {
+  flex: 1;
+}
+
+.arc-line {
+  display: flex;
+  align-items: center;
+}
+
+.arc-type {
+  margin-right: 12rpx;
+  padding: 2rpx 14rpx;
+  border-radius: 999rpx;
+  font-size: 20rpx;
+  color: #8a6524;
+  border: 1rpx solid #c4b083;
+  background: #f8f0dc;
+}
+
+.arc-title {
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #8c3a2b;
+}
+
+.arc-sub {
+  display: block;
+  margin-top: 8rpx;
+  font-size: 23rpx;
+  color: #6b6357;
+}
+
+.arc-time {
+  display: block;
+  margin-top: 4rpx;
+  font-size: 20rpx;
+  color: #7c7488;
+}
+
+.arc-arrow {
+  flex-shrink: 0;
+  font-size: 22rpx;
+  color: #b8924a;
+}
+
+.arc-body {
+  margin-top: 18rpx;
+  padding-top: 16rpx;
+  border-top: 1rpx solid #e8e0cf;
+}
+
+.arc-row {
+  display: flex;
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+  line-height: 1.7;
+}
+
+.arc-k {
+  flex-shrink: 0;
+  width: 130rpx;
+  color: #8a8172;
+  font-size: 22rpx;
+}
+
+.arc-v {
+  flex: 1;
+  color: #3a352d;
+}
+
+.arc-btns {
+  display: flex;
+  margin-top: 16rpx;
+}
+
+.arc-btn {
+  margin-right: 16rpx;
+  padding: 8rpx 28rpx;
+  border-radius: 999rpx;
+  font-size: 23rpx;
+  color: #8a6524;
+  border: 1rpx solid #c9b78c;
+  background: #f8f0dc;
+  transition: transform 0.16s ease;
+}
+
+.arc-btn:active {
+  transform: scale(0.94);
+}
+
+.arc-btn-red {
+  color: #8c3a2b;
+  border-color: #e0c3ba;
+  background: #f8ebe6;
+}
+
+.foot-note {
+  display: block;
+  margin: 28rpx 10rpx 10rpx;
+  text-align: center;
+  font-size: 20rpx;
+  line-height: 1.7;
+  color: #8a8172;
+}

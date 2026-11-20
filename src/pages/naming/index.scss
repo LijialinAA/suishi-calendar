@@ -1,0 +1,94 @@
+.err {
+  display: block;
+  margin-top: 16rpx;
+  color: #8c3a2b;
+  font-size: 24rpx;
+}
+
+.nm-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 24rpx;
+}
+
+.nm-card {
+  width: 48%;
+  margin-bottom: 20rpx;
+  padding: 20rpx 18rpx;
+  border-radius: 18rpx;
+  border: 1rpx solid #ddd4c4;
+  background: #fbf8f1;
+  box-sizing: border-box;
+  box-shadow: 0 4rpx 12rpx rgba(120, 96, 60, 0.13);
+  animation: cardIn 0.42s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  transition: transform 0.16s ease;
+}
+
+.nm-card:nth-child(2) { animation-delay: 0.05s; }
+.nm-card:nth-child(3) { animation-delay: 0.1s; }
+.nm-card:nth-child(4) { animation-delay: 0.15s; }
+.nm-card:nth-child(5) { animation-delay: 0.2s; }
+.nm-card:nth-child(6) { animation-delay: 0.25s; }
+.nm-card:nth-child(n + 7) { animation-delay: 0.3s; }
+
+.nm-card:active {
+  transform: scale(0.96);
+}
+
+.nm-rank {
+  font-size: 22rpx;
+  color: #8a8172;
+  margin-bottom: 6rpx;
+}
+
+.nm-word {
+  display: block;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 42rpx;
+  font-weight: 600;
+  color: #8c3a2b;
+  letter-spacing: 4rpx;
+}
+
+.nm-py {
+  display: block;
+  margin-top: 4rpx;
+  font-size: 22rpx;
+  color: #6b6357;
+}
+
+.nm-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+
+.nm-tag {
+  margin-right: 10rpx;
+  padding: 2rpx 12rpx;
+  border-radius: 999rpx;
+  font-size: 20rpx;
+  border: 1rpx solid currentColor;
+}
+
+.nm-tag-sum {
+  color: #b8924a;
+  border-color: #b8924a;
+}
+
+.nm-mean {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 23rpx;
+  color: #4a443a;
+  line-height: 1.6;
+}
+
+.nm-why {
+  display: block;
+  margin-top: 10rpx;
+  font-size: 21rpx;
+  color: #8a8172;
+  line-height: 1.6;
+}

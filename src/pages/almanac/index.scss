@@ -1,0 +1,334 @@
+.almanac-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 22rpx 22rpx 18rpx;
+  border-radius: 22rpx;
+  border: 1rpx solid #d8c9a8;
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(217, 180, 106, 0.16), transparent 58%),
+    #fbf8f1;
+  box-shadow: 0 8rpx 22rpx rgba(120, 96, 60, 0.16);
+  animation: cardIn 0.62s cubic-bezier(0.16, 0.84, 0.44, 1) both;
+}
+
+.almanac-hero::after {
+  content: "";
+  position: absolute;
+  right: -90rpx;
+  top: -110rpx;
+  width: 320rpx;
+  height: 320rpx;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184, 146, 74, 0.3), transparent 66%);
+  animation: auraPulse 4.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes auraPulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.16);
+  }
+}
+
+.hero-mark {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6rpx;
+}
+
+.hero-mark-t {
+  margin-left: 8rpx;
+  font-size: 21rpx;
+  letter-spacing: 6rpx;
+  color: #8a6527;
+  font-family: "Songti SC", "STSong", serif;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-date {
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-day {
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 76rpx;
+  line-height: 1;
+  font-weight: 600;
+  color: #8c3a2b;
+  text-shadow: 0 4rpx 18rpx #d8c9a8;
+}
+
+.hero-side {
+  margin-left: 18rpx;
+  padding-bottom: 6rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-week {
+  font-size: 24rpx;
+  color: #b8924a;
+  letter-spacing: 2rpx;
+}
+
+.hero-lunar {
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 32rpx;
+  color: #23201b;
+}
+
+.hero-gz {
+  font-size: 22rpx;
+  color: #8a8172;
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 300rpx;
+}
+
+.ly-bar {
+  margin-top: 16rpx;
+}
+
+.ly-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22rpx;
+  color: #6b6357;
+  margin-bottom: 8rpx;
+}
+
+.hero-nav,
+.cal-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14rpx;
+}
+
+.nav-btn {
+  padding: 8rpx 26rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  color: #8a6524;
+  border: 1rpx solid #c9b78c;
+  background: #f8f0dc;
+  transition: transform 0.16s ease, opacity 0.16s ease;
+}
+
+.nav-btn:active {
+  transform: scale(0.94);
+  opacity: 0.86;
+}
+
+.nav-mid {
+  color: #23201b;
+  border-color: #ddd4c4;
+  background: #f6f1e6;
+}
+
+.yj {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yj-side {
+  width: 76rpx;
+  flex-shrink: 0;
+}
+
+.yj-badge {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 14rpx;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.yj-badge.yi {
+  color: #0f2a22;
+  background: linear-gradient(180deg, #9fe0c8, #5da98d);
+}
+
+.yj-badge.ji {
+  color: #2c0f0a;
+  background: linear-gradient(180deg, #eaa695, #c1553f);
+}
+
+.yj-body {
+  flex: 1;
+}
+
+.hour-now {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14rpx 20rpx;
+  border-radius: 16rpx;
+  background: rgba(217, 180, 106, 0.08);
+  border: 1rpx solid rgba(217, 180, 106, 0.25);
+  font-size: 24rpx;
+}
+
+.chips-gap {
+  margin-top: 16rpx;
+}
+
+.tip-line {
+  display: block;
+  margin-top: 16rpx;
+  font-size: 21rpx;
+  line-height: 1.65;
+  color: #7c7488;
+}
+
+.sec-label {
+  display: block;
+  margin: 6rpx 0 12rpx;
+  font-size: 23rpx;
+  color: #6b6357;
+}
+
+/* 十二时辰 */
+.ts-row {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+}
+
+.ts-row:last-of-type {
+  border-bottom: none;
+}
+
+.ts-left {
+  width: 150rpx;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-name {
+  font-size: 28rpx;
+  color: #8c3a2b;
+}
+
+.ts-range {
+  font-size: 20rpx;
+  color: #7c7488;
+}
+
+.ts-mid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-gz {
+  font-size: 27rpx;
+  color: #23201b;
+  letter-spacing: 4rpx;
+}
+
+.ts-god {
+  font-size: 21rpx;
+  color: #8a8172;
+}
+
+.ts-luck {
+  width: 60rpx;
+  text-align: right;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+/* 月历 */
+.cal-week {
+  display: flex;
+  margin-top: 16rpx;
+}
+
+.cal-w {
+  width: 14.28%;
+  text-align: center;
+  font-size: 22rpx;
+  color: #8a8172;
+}
+
+.cal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8rpx;
+}
+
+.cal-cell {
+  box-sizing: border-box;
+  flex: 0 0 14.28%;
+  width: 14.28%;
+  height: 92rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14rpx;
+}
+
+.cal-d {
+  font-size: 27rpx;
+  color: #23201b;
+  line-height: 1.3;
+}
+
+.cal-l {
+  font-size: 18rpx;
+  color: #7c7488;
+  line-height: 1.3;
+}
+
+.cal-out .cal-d,
+.cal-out .cal-l {
+  color: #c9c0ae;
+}
+
+.cal-jq {
+  color: #b8924a;
+}
+
+.cal-today {
+  border: 1rpx solid #b8924a;
+}
+
+.cal-sel {
+  background: linear-gradient(180deg, rgba(184, 146, 74, 0.2), rgba(184, 146, 74, 0.1));
+}
+
+.cal-sel .cal-d {
+  color: #8c3a2b;
+  font-weight: 600;
+}
+
+.foot-note {
+  display: block;
+  margin: 24rpx 10rpx 10rpx;
+  text-align: center;
+  font-size: 20rpx;
+  line-height: 1.7;
+  color: #8a8172;
+}

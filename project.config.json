@@ -1,0 +1,17 @@
+{
+  "miniprogramRoot": "./dist",
+  "projectname": "mingli-miniapp",
+  "description": "Local miniapp",
+  "appid": "wx87858a678a21780a",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "compileHotReLoad": false,
+    "postcss": true,
+    "minified": true,
+    "disableSWC": true,
+    "compileWorklet": true
+  },
+  "compileType": "miniprogram"
+}

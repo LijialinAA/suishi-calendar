@@ -1,0 +1,79 @@
+.err {
+  display: block;
+  margin-top: 16rpx;
+  color: #8c3a2b;
+  font-size: 24rpx;
+}
+
+.fs-today {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fs-today-i {
+  flex: 1;
+  text-align: center;
+}
+
+.fs-today-v {
+  display: block;
+  font-family: "Songti SC", serif;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #8c3a2b;
+}
+
+.fs-today-k {
+  display: block;
+  margin-top: 4rpx;
+  font-size: 21rpx;
+  color: #8a8172;
+}
+
+.fs-table {
+  margin-top: 8rpx;
+  border-radius: 14rpx;
+  overflow: hidden;
+  border: 1rpx solid #e0d6c4;
+}
+
+.fs-tr {
+  display: flex;
+  padding: 14rpx 16rpx;
+  font-size: 23rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+  align-items: flex-start;
+}
+
+.fs-tr:last-child { border-bottom: none; }
+.fs-tr > text:first-child { width: 110rpx; flex-shrink: 0; }
+.fs-tr > text:nth-child(2) { width: 100rpx; flex-shrink: 0; font-weight: 600; }
+.fs-tr > text:nth-child(3) { width: 180rpx; flex-shrink: 0; color: #4a443a; }
+.fs-tr > text:nth-child(4) { flex: 1; color: #6b6357; }
+
+.fs-th {
+  background: rgba(184, 146, 74, 0.1);
+  color: #8c3a2b;
+  font-weight: 600;
+}
+
+.fs-th text { color: #8c3a2b; }
+
+.fs-yi { color: #2f6b57 !important; }
+.fs-ji { color: #6b6357 !important; }
+
+.tp-row {
+  display: flex;
+  margin-top: 12rpx;
+  font-size: 25rpx;
+  line-height: 1.7;
+}
+
+.tp-em {
+  flex-shrink: 0;
+  width: 50rpx;
+  color: #b8924a;
+  font-weight: 600;
+}
+
+.tp-span { flex: 1; color: #3a352d; }

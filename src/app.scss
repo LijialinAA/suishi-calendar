@@ -1,0 +1,467 @@
+/* 全局主题：杏色底 + 祥云纹 + 宣纸卡片 + 朱砂/鎏金
+   取色：--bg #efe9dc / --paper #fbf8f1 / --ink #23201b / --red #8c3a2b / --gold #b8924a / --jade #3f6b5e */
+
+page {
+  background-color: #efe9dc;
+  color: #23201b;
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  font-size: 28rpx;
+  line-height: 1.68;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 20rpx 22rpx 48rpx;
+  box-sizing: border-box;
+  background-color: #efe9dc;
+  background-image:
+    /* 祥云纹：低透明度重复平铺 */
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><g fill="%23cdb78c" opacity="0.45"><path d="M18 80c-7 0-12-5-12-11s5-11 12-11c1-9 9-16 19-16 10 0 18 6 20 15 8-1 14 4 14 10 0 7-6 13-14 13H18z"/><path d="M196 196c-8 0-14-6-14-13s6-13 14-13c1-11 10-19 22-19 12 0 21 7 23 18 9-1 16 5 16 12 0 8-7 15-16 15h-45z"/><path d="M118 122c-5 0-9-4-9-8s4-8 9-8c1-7 7-12 14-12 8 0 14 5 15 12 6-1 11 3 11 8s-5 8-11 8h-29z"/><path d="M222 84c-5 0-8-3-8-7s3-7 8-7c1-6 6-10 12-10 6 0 11 4 12 10 5-1 9 3 9 7s-4 7-9 7h-24z"/><path d="M40 236c-6 0-10-4-10-9s4-9 10-9c1-8 8-14 17-14 8 0 15 5 17 13 6-1 11 3 11 9 0 6-5 10-11 10H40z"/></g><g fill="none" stroke="%23c4ab7c" stroke-width="2.4" stroke-linecap="round" opacity="0.4"><path d="M34 63c6-5 14-6 20-3"/><path d="M214 178c7-6 16-7 23-3"/><path d="M132 108c5-4 12-5 17-2"/></g></svg>'),
+    linear-gradient(180deg, #f8f1e1 0%, rgba(248, 241, 225, 0) 340rpx);
+  background-repeat: repeat, no-repeat;
+  background-size: 300rpx 300rpx, 100% 340rpx;
+  background-position: 0 0, 0 0;
+}
+
+/* tabBar 页：为自定义底部导航留出空间 */
+.page-tab {
+  padding-bottom: calc(150rpx + env(safe-area-inset-bottom));
+}
+
+/* 合规声明：所有页面底部统一展示 */
+.page::after {
+  content: "本应用内容依据传统历法、民俗资料整理，仅供传统文化研究与娱乐参考，不构成任何决策、医疗或投资建议。";
+  display: block;
+  margin: 26rpx 8rpx 6rpx;
+  text-align: center;
+  font-size: 19rpx;
+  line-height: 1.7;
+  color: #8a8172;
+  letter-spacing: 0.5rpx;
+}
+
+/* ===== 卡片：宣纸质感 ===== */
+.card {
+  position: relative;
+  margin-top: 18rpx;
+  padding: 24rpx 24rpx 22rpx;
+  border-radius: 16rpx;
+  border: 1rpx solid #e0d3b8;
+  background: #fdfaf3;
+  box-shadow: 0 6rpx 18rpx rgba(120, 96, 60, 0.13);
+  animation: cardIn 0.62s cubic-bezier(0.16, 0.84, 0.44, 1) both;
+}
+
+/* 卡片依次入场 */
+.card:nth-of-type(1) { animation-delay: 0.04s; }
+.card:nth-of-type(2) { animation-delay: 0.1s; }
+.card:nth-of-type(3) { animation-delay: 0.16s; }
+.card:nth-of-type(4) { animation-delay: 0.22s; }
+.card:nth-of-type(5) { animation-delay: 0.28s; }
+.card:nth-of-type(6) { animation-delay: 0.34s; }
+.card:nth-of-type(n + 7) { animation-delay: 0.4s; }
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 56rpx, 0) scale(0.955);
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.card-hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  font-family: "Songti SC", "STSong", "SimSun", serif;
+  font-size: 31rpx;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+  color: #23201b;
+}
+
+.card-title::before {
+  content: "";
+  width: 6rpx;
+  height: 26rpx;
+  margin-right: 12rpx;
+  border-radius: 2rpx;
+  background: #8c3a2b;
+}
+
+.card-extra {
+  font-size: 22rpx;
+  color: #8a8172;
+}
+
+/* ===== 文本 ===== */
+.muted {
+  color: #8a8172;
+  font-size: 22rpx;
+}
+
+.serif {
+  font-family: "Songti SC", "STSong", "SimSun", serif;
+}
+
+.gold {
+  color: #9a7430;
+}
+
+.divider {
+  height: 1rpx;
+  margin: 16rpx 0;
+  background: linear-gradient(90deg, transparent, #ddd4c4, transparent);
+}
+
+/* ===== 标签 ===== */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chips-gap {
+  margin-top: 8rpx;
+}
+
+.chip {
+  margin: 0 10rpx 10rpx 0;
+  padding: 4rpx 16rpx;
+  border-radius: 999rpx;
+  font-size: 23rpx;
+  color: #4a443a;
+  border: 1rpx solid #ddd4c4;
+  background: #f3eee2;
+}
+
+.chip-gold {
+  color: #8a6524;
+  border-color: #d8c9a8;
+  background: #f8f0dc;
+}
+
+.chip-green {
+  color: #2f6b57;
+  border-color: #b8d3c6;
+  background: #eaf3ee;
+}
+
+.chip-red {
+  color: #8c3a2b;
+  border-color: #e0c3ba;
+  background: #f8ebe6;
+}
+
+/* ===== 键值 ===== */
+.kv-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.kv {
+  width: 50%;
+  padding: 6rpx 0;
+  box-sizing: border-box;
+}
+
+.kv-full {
+  width: 100%;
+}
+
+.kv-k {
+  font-size: 21rpx;
+  color: #8a8172;
+}
+
+.kv-v {
+  font-size: 26rpx;
+  color: #23201b;
+}
+
+/* ===== 五行条 ===== */
+.bar-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.bar-name {
+  width: 58rpx;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 25rpx;
+  color: #8c3a2b;
+}
+
+.bar-track {
+  flex: 1;
+  height: 12rpx;
+  margin: 0 14rpx;
+  border-radius: 999rpx;
+  background: #e8e0cf;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999rpx;
+  background: linear-gradient(90deg, #b8924a, #e2c079);
+  animation: barGrow 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes barGrow {
+  from { transform: scaleX(0); transform-origin: left; }
+  to { transform: scaleX(1); transform-origin: left; }
+}
+
+.bar-val {
+  width: 66rpx;
+  text-align: right;
+  font-size: 21rpx;
+  color: #8a8172;
+}
+
+/* ===== 状态色 ===== */
+.jx-good { color: #2f6b57; }
+.jx-mid { color: #4a443a; }
+.jx-bad { color: #8c3a2b; }
+
+/* ===== 按钮 ===== */
+.btn {
+  position: relative;
+  overflow: hidden;
+  margin-top: 22rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  border-radius: 999rpx;
+  font-size: 29rpx;
+  letter-spacing: 4rpx;
+  color: #fff6e2;
+  font-weight: 600;
+  background: linear-gradient(135deg, #8c3a2b, #a8472f 55%, #7d3225);
+  box-shadow: 0 8rpx 22rpx rgba(140, 58, 43, 0.3);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+}
+
+/* 主按钮流光 */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 42%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  transform: skewX(-20deg);
+  animation: btnShine 3.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes btnShine {
+  0%, 55% { left: -50%; }
+  100% { left: 120%; }
+}
+
+.btn:active {
+  transform: scale(0.972);
+  box-shadow: 0 3rpx 10rpx rgba(140, 58, 43, 0.24);
+  opacity: 0.94;
+}
+
+.btn-ghost {
+  color: #8c3a2b;
+  background: transparent;
+  border: 1rpx solid #cf937f;
+  box-shadow: none;
+}
+
+.btn-ghost::after {
+  display: none;
+}
+
+.btn-ghost:active {
+  background: #f8ebe6;
+  transform: scale(0.972);
+}
+
+/* ===== 表单 ===== */
+.form-row {
+  display: flex;
+  align-items: center;
+  min-height: 80rpx;
+  border-bottom: 1rpx solid #e8e0cf;
+  transition: background 0.18s ease;
+}
+
+.form-row:last-child {
+  border-bottom: none;
+}
+
+.form-row:active {
+  background: #f6f1e6;
+}
+
+.form-label {
+  width: 150rpx;
+  flex-shrink: 0;
+  font-size: 25rpx;
+  color: #6b6357;
+}
+
+.form-value {
+  flex: 1;
+  font-size: 27rpx;
+  color: #23201b;
+  text-align: right;
+  padding-right: 8rpx;
+}
+
+.form-input {
+  flex: 1;
+  font-size: 27rpx;
+  color: #23201b;
+  text-align: right;
+}
+
+.seg {
+  display: flex;
+  border-radius: 999rpx;
+  padding: 4rpx;
+  background: #efe7d7;
+}
+
+.seg-item {
+  min-width: 92rpx;
+  padding: 6rpx 18rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #6b6357;
+  border-radius: 999rpx;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.seg-item-on {
+  color: #fff6e2;
+  font-weight: 600;
+  background: linear-gradient(135deg, #8c3a2b, #a8472f);
+}
+
+.seg-item:active {
+  opacity: 0.82;
+}
+
+/* 轻量按压缩放：卡片、胶囊、导航按钮通用反馈 */
+.tap:active {
+  transform: scale(0.96);
+  opacity: 0.9;
+}
+
+/* ===== 空态 ===== */
+.empty {
+  padding: 26rpx 0;
+  text-align: center;
+  font-size: 23rpx;
+  color: #8a8172;
+}
+
+/* ===== 页面标题：金色扫描光 ===== */
+.page-hd {
+  padding: 10rpx 6rpx 0;
+}
+
+.page-hd-row {
+  display: flex;
+  align-items: center;
+}
+
+.page-ico {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 48rpx 48rpx;
+  filter: drop-shadow(0 2rpx 6rpx rgba(184, 146, 74, 0.35));
+  animation: icoIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both, icoGlow 3.2s ease-in-out 1s infinite;
+}
+
+@keyframes icoGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.68; }
+}
+
+@keyframes icoIn {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(-24deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-title {
+  display: block;
+  font-family: "Songti SC", "STSong", "SimSun", serif;
+  font-size: 42rpx;
+  font-weight: 700;
+  letter-spacing: 5rpx;
+  background: linear-gradient(90deg, #8c3a2b 0%, #c2703f 22%, #b8924a 45%, #8c3a2b 68%, #b8924a 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: scanLight 3.4s linear infinite;
+}
+
+@keyframes scanLight {
+  0% { background-position: 0% center; }
+  100% { background-position: 220% center; }
+}
+
+.page-sub {
+  display: block;
+  margin-top: 4rpx;
+  font-size: 21rpx;
+  color: #8a8172;
+  letter-spacing: 1rpx;
+}
+
+.para {
+  display: block;
+  font-size: 24rpx;
+  line-height: 1.72;
+  color: #4a443a;
+}
+
+.foot-note {
+  display: block;
+  margin: 22rpx 10rpx 8rpx;
+  text-align: center;
+  font-size: 19rpx;
+  line-height: 1.7;
+  color: #8a8172;
+}
+
+.err {
+  display: block;
+  margin-top: 14rpx;
+  color: #8c3a2b;
+  font-size: 23rpx;
+}

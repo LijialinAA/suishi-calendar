@@ -1,0 +1,77 @@
+.gl-today-hd {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.gl-name {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #5c4630;
+  letter-spacing: 2rpx;
+  margin-bottom: 8rpx;
+}
+
+.gl-classic {
+  display: block;
+  font-size: 25rpx;
+  color: #8c3a2b;
+  line-height: 1.6;
+  margin-bottom: 8rpx;
+}
+
+.gl-plain {
+  display: block;
+  font-size: 26rpx;
+  color: #6b5a44;
+  line-height: 1.75;
+}
+
+.gl-hit {
+  border-color: #cdb78c;
+  background: #fbf6ea;
+}
+
+.gl-tabs {
+  display: flex;
+  margin: 22rpx 0 18rpx;
+  padding: 8rpx;
+  border-radius: 999rpx;
+  background: rgba(224, 211, 184, 0.45);
+}
+
+.gl-tab {
+  flex: 1;
+  text-align: center;
+  padding: 12rpx 0;
+  font-size: 25rpx;
+  color: #8a8172;
+  border-radius: 999rpx;
+  transition: all 0.2s ease;
+}
+
+.gl-tab-on {
+  background: #fdfaf3;
+  color: #8c3a2b;
+  font-weight: 600;
+  box-shadow: 0 4rpx 12rpx rgba(120, 96, 60, 0.12);
+}
+
+.gl-item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx dashed #e3d8c2;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.gl-tip {
+  display: block;
+  margin-top: 14rpx;
+  font-size: 22rpx;
+  color: #9b8f7c;
+  line-height: 1.7;
+}

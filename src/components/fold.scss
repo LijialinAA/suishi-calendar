@@ -1,0 +1,32 @@
+.fold-hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52rpx;
+  transition: opacity 0.16s ease;
+}
+
+.fold-hd:active {
+  opacity: 0.68;
+}
+
+.fold-meta {
+  display: flex;
+  align-items: center;
+}
+
+.fold-body {
+  margin-top: 14rpx;
+  animation: foldIn 0.34s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes foldIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -14rpx, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
