@@ -2,6 +2,8 @@
 
 以 Taro + React + TypeScript 编写的传统历法与盘面工具。全部数据在本地计算，无需登录、不联网、不收集任何用户信息。
 
+**在线体验：** <https://37ktadqegx5r7s7z36b.traesite.cn>（H5 版，手机/桌面浏览器均可打开）
+
 > 源码可见（Source-Available）。**商业使用需获得书面授权**，详见 [LICENSE](LICENSE)。
 
 ## 功能

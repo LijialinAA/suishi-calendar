@@ -6,7 +6,7 @@ import prodConfig from './prod'
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
   const baseConfig: UserConfigExport<'webpack5'> = {
-    projectName: 'mingli-miniapp',
+    projectName: 'suishi-calendar',
     date: '2026-11-10',
     designWidth: 750,
     deviceRatio: {
@@ -55,7 +55,10 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
       }
     },
     h5: {
-      publicPath: '/',
+      publicPath: './',
+      router: {
+        mode: 'hash'
+      },
       staticDirectory: 'static',
       output: {
         filename: 'js/[name].[hash:8].js',

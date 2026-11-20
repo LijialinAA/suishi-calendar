@@ -18,6 +18,11 @@ const LIST: Item[] = [
 ]
 
 function currentRoute () {
+  // H5 端直接用 hash 判断，避免页面栈尚未更新导致高亮滞后
+  if (process.env.TARO_ENV === 'h5' && typeof window !== 'undefined') {
+    const hash = window.location.hash.replace(/^#\/?/, '')
+    if (hash) return hash
+  }
   const pages = Taro.getCurrentPages()
   const page = pages[pages.length - 1]
   return page ? page.route : LIST[0].path
@@ -30,6 +35,20 @@ export default function CustomTabBar () {
   useEffect(() => {
     const t = setTimeout(() => setActive(currentRoute()), 60)
     return () => clearTimeout(t)
+  }, [])
+
+  // H5 端组件常驻，Taro 路由更新走 history API（不触发 hashchange），这里轮询校正高亮
+  useEffect(() => {
+    if (process.env.TARO_ENV !== 'h5' || typeof window === 'undefined') return
+    let last = currentRoute()
+    const timer = setInterval(() => {
+      const now = currentRoute()
+      if (now !== last) {
+        last = now
+        setActive(now)
+      }
+    }, 200)
+    return () => clearInterval(timer)
   }, [])
 
   const go = (path: string) => {
