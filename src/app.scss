@@ -1,27 +1,118 @@
-/* 全局主题：杏色底 + 祥云纹 + 宣纸卡片 + 朱砂/鎏金
-   取色：--bg #efe9dc / --paper #fbf8f1 / --ink #23201b / --red #8c3a2b / --gold #b8924a / --jade #3f6b5e */
+/* 全局主题：深紫星空底 + 宣纸面板 + 朱砂/鎏金（对齐原版 1.0.31）
+   取色：--bg #140d33 / --paper #fbf8f1 / --ink #23201b / --red #8c3a2b / --gold #b8924a / --jade #3f6b5e */
 
 page {
-  background-color: #efe9dc;
-  color: #23201b;
-  font-family: -apple-system, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  background-color: #140d33;
+  color: #f2ebdc;
+  font-family: "Songti SC", "STSong", "SimSun", serif;
   font-size: 28rpx;
-  line-height: 1.68;
+  line-height: 1.72;
 }
 
 .page {
   position: relative;
   min-height: 100vh;
-  padding: 20rpx 22rpx 48rpx;
+  padding: 22rpx 22rpx 56rpx;
   box-sizing: border-box;
-  background-color: #efe9dc;
+  background-color: #140d33;
   background-image:
-    /* 祥云纹：低透明度重复平铺 */
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><g fill="%23cdb78c" opacity="0.45"><path d="M18 80c-7 0-12-5-12-11s5-11 12-11c1-9 9-16 19-16 10 0 18 6 20 15 8-1 14 4 14 10 0 7-6 13-14 13H18z"/><path d="M196 196c-8 0-14-6-14-13s6-13 14-13c1-11 10-19 22-19 12 0 21 7 23 18 9-1 16 5 16 12 0 8-7 15-16 15h-45z"/><path d="M118 122c-5 0-9-4-9-8s4-8 9-8c1-7 7-12 14-12 8 0 14 5 15 12 6-1 11 3 11 8s-5 8-11 8h-29z"/><path d="M222 84c-5 0-8-3-8-7s3-7 8-7c1-6 6-10 12-10 6 0 11 4 12 10 5-1 9 3 9 7s-4 7-9 7h-24z"/><path d="M40 236c-6 0-10-4-10-9s4-9 10-9c1-8 8-14 17-14 8 0 15 5 17 13 6-1 11 3 11 9 0 6-5 10-11 10H40z"/></g><g fill="none" stroke="%23c4ab7c" stroke-width="2.4" stroke-linecap="round" opacity="0.4"><path d="M34 63c6-5 14-6 20-3"/><path d="M214 178c7-6 16-7 23-3"/><path d="M132 108c5-4 12-5 17-2"/></g></svg>'),
-    linear-gradient(180deg, #f8f1e1 0%, rgba(248, 241, 225, 0) 340rpx);
-  background-repeat: repeat, no-repeat;
-  background-size: 300rpx 300rpx, 100% 340rpx;
-  background-position: 0 0, 0 0;
+    /* 星点：低透明度平铺 */
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320"><g fill="%23ffffff"><circle cx="28" cy="34" r="1.5" opacity="0.85"/><circle cx="96" cy="14" r="1" opacity="0.55"/><circle cx="152" cy="62" r="1.2" opacity="0.7"/><circle cx="212" cy="24" r="0.9" opacity="0.5"/><circle cx="286" cy="48" r="1.3" opacity="0.75"/><circle cx="44" cy="112" r="1" opacity="0.5"/><circle cx="120" cy="148" r="1.6" opacity="0.8"/><circle cx="188" cy="128" r="0.9" opacity="0.45"/><circle cx="252" cy="96" r="1.1" opacity="0.6"/><circle cx="302" cy="168" r="1.4" opacity="0.7"/><circle cx="16" cy="198" r="1.1" opacity="0.55"/><circle cx="76" cy="236" r="1.5" opacity="0.8"/><circle cx="146" cy="214" r="0.9" opacity="0.45"/><circle cx="222" cy="248" r="1.2" opacity="0.6"/><circle cx="288" cy="216" r="1" opacity="0.5"/><circle cx="38" cy="292" r="1.3" opacity="0.65"/><circle cx="112" cy="300" r="0.9" opacity="0.4"/><circle cx="196" cy="288" r="1.4" opacity="0.7"/><circle cx="262" cy="300" r="1" opacity="0.5"/></g><g fill="%23ffedb0"><circle cx="64" cy="76" r="1.8" opacity="0.85"/><circle cx="230" cy="182" r="1.6" opacity="0.65"/><circle cx="172" cy="272" r="1.5" opacity="0.55"/></g></svg>'),
+    /* 顶部紫气与右下暖光 */
+    radial-gradient(ellipse at 50% -6%, rgba(112, 72, 190, 0.5), rgba(20, 13, 51, 0) 62%),
+    radial-gradient(ellipse at 88% 96%, rgba(184, 146, 74, 0.18), rgba(20, 13, 51, 0) 58%);
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: 320rpx 320rpx, 100% 620rpx, 100% 100%;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+/* ===== 页头：金色扫描光标题 ===== */
+.hdr {
+  padding: 26rpx 10rpx 18rpx;
+  text-align: center;
+}
+
+.hdr-title {
+  display: block;
+  margin: 0 0 8rpx;
+  font-size: 50rpx;
+  font-weight: 700;
+  letter-spacing: 5rpx;
+  background: linear-gradient(90deg, #b08a3e 0%, #f6dc8e 25%, #fff7da 50%, #f6dc8e 75%, #b08a3e 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: scanLight 3.4s linear infinite;
+  filter: drop-shadow(0 0 12rpx rgba(255, 205, 90, 0.35));
+}
+
+.hdr-sub {
+  display: block;
+  font-size: 21rpx;
+  letter-spacing: 1rpx;
+  color: #a897cf;
+  text-shadow: 0 0 10rpx rgba(157, 123, 255, 0.3);
+}
+
+/* ===== 八宫格入口（4×2） ===== */
+.f-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -6rpx 14rpx;
+}
+
+.fcard {
+  width: 25%;
+  padding: 0 6rpx 12rpx;
+  box-sizing: border-box;
+}
+
+.fcard-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6rpx;
+  padding: 14rpx 4rpx 12rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #ddd4c4;
+  border-top: 4rpx solid #8c3a2b;
+  background: #fdfaf3;
+  box-shadow: 0 4rpx 14rpx rgba(0, 0, 0, 0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.fcard-in:active {
+  transform: translateY(-2rpx) scale(0.97);
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.24);
+}
+
+.fcard-ico {
+  width: 44rpx;
+  height: 44rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 44rpx 44rpx;
+}
+
+.fcard-name {
+  font-size: 23rpx;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #23201b;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fcard-sub {
+  font-size: 18rpx;
+  line-height: 1.25;
+  color: #8a8172;
+  text-align: center;
+  white-space: nowrap;
+  transform: scale(0.92);
 }
 
 /* tabBar 页：为自定义底部导航留出空间 */
@@ -37,8 +128,7 @@ page {
   text-align: center;
   font-size: 19rpx;
   line-height: 1.7;
-  color: #8a8172;
-  letter-spacing: 0.5rpx;
+  color: rgba(202, 188, 160, 0.55);
 }
 
 /* ===== 卡片：宣纸质感 ===== */
@@ -50,7 +140,13 @@ page {
   border: 1rpx solid #e0d3b8;
   background: #fdfaf3;
   box-shadow: 0 6rpx 18rpx rgba(120, 96, 60, 0.13);
+  color: #3a342b;
   animation: cardIn 0.62s cubic-bezier(0.16, 0.84, 0.44, 1) both;
+}
+
+/* 纸面容器内统一墨色文字，避免深色主题下继承浅色 */
+.almanac-hero {
+  color: #3a342b;
 }
 
 /* 卡片依次入场 */
@@ -421,7 +517,7 @@ page {
   font-size: 42rpx;
   font-weight: 700;
   letter-spacing: 5rpx;
-  background: linear-gradient(90deg, #8c3a2b 0%, #c2703f 22%, #b8924a 45%, #8c3a2b 68%, #b8924a 100%);
+  background: linear-gradient(90deg, #b08a3e 0%, #f6dc8e 25%, #fff7da 50%, #f6dc8e 75%, #b08a3e 100%);
   background-size: 220% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -439,7 +535,7 @@ page {
   display: block;
   margin-top: 4rpx;
   font-size: 21rpx;
-  color: #8a8172;
+  color: #a897cf;
   letter-spacing: 1rpx;
 }
 
@@ -456,7 +552,7 @@ page {
   text-align: center;
   font-size: 19rpx;
   line-height: 1.7;
-  color: #8a8172;
+  color: rgba(202, 188, 160, 0.55);
 }
 
 .err {

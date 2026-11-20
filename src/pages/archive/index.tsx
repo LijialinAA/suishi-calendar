@@ -7,7 +7,7 @@ const VERSION = '1.0.0'
 
 export default function About () {
   return (
-    <View className='page page-tab'>
+    <View className='page'>
       <PageHead title='关于' sub='我的岁时日历 · 使用说明' icon='archive' />
 
       <Card title='功能'>

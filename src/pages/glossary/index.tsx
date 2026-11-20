@@ -23,7 +23,7 @@ export default function Glossary () {
   const list = useMemo(() => (ENTRIES as Entry[]).filter((e) => e.cat === cat), [cat])
 
   return (
-    <View className='page page-tab'>
+    <View className='page'>
       <PageHead title='名词释义' sub='传统术数用语 · 古籍说法整理' icon='study' />
 
       <View className='card'>

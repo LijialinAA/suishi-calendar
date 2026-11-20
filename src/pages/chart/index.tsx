@@ -62,7 +62,7 @@ export default function Chart () {
   }, [result])
 
   return (
-    <View className='page page-tab'>
+    <View className='page'>
       <PageHead title='四柱盘面' sub='干支换算 · 大运纪年 · 星曜落宫' icon='chart' />
 
       <Card title='生辰信息' extra='公历 / 农历均可'>

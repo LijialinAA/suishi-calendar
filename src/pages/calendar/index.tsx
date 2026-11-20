@@ -26,7 +26,7 @@ export default function Calendar () {
   }
 
   return (
-    <View className='page page-tab'>
+    <View className='page'>
       <PageHead title='月历' sub='按月浏览 · 点选日期查看农历与节气' icon='calendar' />
 
       <Card title={`${al.y} 年 ${al.m} 月`} extra={al.isToday ? '今日' : ''}>

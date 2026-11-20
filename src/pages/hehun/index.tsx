@@ -74,7 +74,7 @@ export default function Hehun () {
   }
 
   return (
-    <View className='page page-tab'>
+    <View className='page'>
       <PageHead title='生肖合参' sub='生肖根基 · 夫妻宫 · 五行互补（传统说法）' icon='hehun' />
 
       <Card title='甲方' extra={`${a.gender}命`}>
